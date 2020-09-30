@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box; }
+
+html, body, .PoseNet, .tv, .tv-inner {
+  width: 100%;
+  height: 100%; }
+
+html, body, .PoseNet {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.PoseNet__loading {
+  position: absolute;
+  font-family: 'Open Sans';
+  font-size: 2em; }
+
+.PoseNet video {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none; }
+
