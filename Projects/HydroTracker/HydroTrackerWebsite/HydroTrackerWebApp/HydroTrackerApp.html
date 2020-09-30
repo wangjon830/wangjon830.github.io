@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HydroTracker</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom fonts -->
+  <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+    
+  <!-- Custom styles -->
+  <link href="css/appSite.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+    <div class="container">
+        <div class="row">
+            <div class=" navbar-nav text-uppercase ml-auto" style="position:absolute; left: 10%">
+                <div id="mainSidebar">
+                <button class="openbtn" onclick="openNav(); closeNav2()"><i class="fa fa-user"></i>    Profile</button>
+                </div>
+            </div>
+            <div id="mySidebar" class="sidebar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 30px;color: #818181; display: block"><i class="fa fa-user"></i> <h4 style="display:inline-block" id="username">Jonathan Wang</h4></div>
+              <a href="#" onclick="aboutClick()">-About</a>
+              <div id="gender" style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181; display: block"></div> 
+                <div style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181; display: block"id="age"></div> 
+                <div  style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181; display: block"id="weight"></div> 
+              <a href="#" onclick="progressClick()">-Progress</a>
+                <div style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181; display: block"id="prog"></div> 
+                
+            </div>
+            <div class="" style="position:absolute;left:45%">
+           <a class="navbar-brand js-scroll-trigger" href="../index.html" style="font-size:30px;">HydroTracker</a>
+            </div>
+            <div class="" style="">
+            <a class="navbar-brand js-scroll-trigger" href="" style="color:#33404b; font-size:30px; text-align: center">|</a>
+            </div>
+            <div class="navbar-nav text-uppercase ml-auto" style="position:absolute;left:80%">
+            <div id="mainSidebar2">
+                <button class="openbtn2" onclick="openNav2(); closeNav()">
+                  <i class="fa fa-inbox"></i> Inbox</button>
+            </div>
+            </div>
+            <div id="mySidebar2" class="sidebar2">
+              <a href="javascript:void(0)" class="closebtn2" onclick="closeNav2()">&times;</a>
+              
+        <ul class="">
+            <li>
+                <div style="color:#818181; padding: 8px 8px 8px 32px;text-decoration: none;font-size: 30px;color: #818181; display: block"> <h4 style="display:inline-block" id="username">Notifications</h4></div>
+            </li>
+          <li class="">
+            <a class="" href="#">12:00pm You haven't drank today. Start drinking!</a>
+          </li>
+
+        </ul>
+            </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div id="wholeBody">
+  <header class="masthead" style="">
+    <div class="container" style="min-height: 100vh" >
+    <div class="wrapper" style="padding-top:15vh">
+        <div class="row">   
+        <div class = "col-md-6 col-sm-4" style="height:80vh;border-top-style:black"><img src="" style="height:600px; width:400px" id="dailyImage">
+        </div>
+        <div class="mainLeft col-md-5 col-sm-4" style="">
+            <div id="headText" style="height: 20vh; padding: 25px; text-align: left"><h2 class="section-heading text-uppercase" style="font-size:40px">Daily <br> Progress:</h2>
+            <h3 class="section-subheading text-muted" style="display:inline-block">Goal: </h3>
+            <h3 class="section-subheading text-muted" style="display:inline-block" id="goalHead"></h3>
+            </div>
+            <div id="headText" style="height: 20vh; padding: 20px; text-align: left; padding-top: 0px"><h2 class="section-heading text-uppercase" style="font-size:100px" id="dailyAmount"></h2></div>
+            <div style="height: 20vh; padding: 25px; text-align: left"><h2 class="section-heading text-uppercase" style="font-size:40px" id="dailyMessage"></h2></div>
+            <div id="headText" style="height: 20vh; padding: 25px; text-align: left">     <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" href="#portfolioModal3" type="button">Closer Look</button></div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <!-- Team -->
+  <section class="bg-light page-section" id="team">
+    <div class="container" style="">
+      <div class="row" style="padding-bottom:40px">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Weekly Progress</h2>
+          <h3 class="section-subheading text-muted" style="display:inline-block">Goal: </h3>
+          <h3 class="section-subheading text-muted" style="display:inline-block" id="goal"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="mondayImage">
+            <h4 id="monday"></h4>
+            <p class="text-muted" id="mondayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="tuesdayImage">
+            <h4 id="tuesday"></h4>
+            <p class="text-muted" id="tuesdayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="wednesdayImage">
+            <h4 id="wednesday"></h4>
+            <p class="text-muted" id="wednesdayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="thursdayImage">
+            <h4 id="thursday"></h4>
+            <p class="text-muted" id="thursdayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="fridayImage">
+            <h4 id="friday"></h4>
+            <p class="text-muted" id="fridayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="saturdayImage">
+            <h4 id="saturday"></h4>
+            <p class="text-muted" id="saturdayAmount"></p>
+          </div>
+        </div>
+        <div class="weekly">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="" alt="" style="width: 20vh;height:20vh" id="sundayImage">
+            <h4 id="sunday"></h4>
+            <p class="text-muted" id="sundayAmount"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Portfolio Grid -->
+  <section class="bg-white page-section" id="portfolio">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-2 portfolio-item">
+
+            <img class="img-fluid" src="css/images/running.png" alt="" style="height:150px; width:150px">
+        </div>
+        <div class="col-md-8 portfolio-item" style="float:left; text-align: left;padding-top:3vh">
+            <h1>Add a Goal for the Week</h1>
+            <p class="text-muted">Recommended 3000mL per day</p>
+        </div>
+        <div class="col-md-2 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover" style="width:150px;height:150px">
+              <div class="portfolio-hover-content" style="width:150px;height:150px">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="" alt="" style="height:150px; width:150px">
+          </a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-2 portfolio-item">
+
+            <img class="img-fluid" src="css/images/water.png" alt="" style="height:150px; width:150px">
+        </div>
+        <div class="col-md-8 portfolio-item" style="float:left; text-align: left;padding-top:3vh">
+            <h1>Log Water Consumption</h1>
+            <p class="text-muted">Any water consumed not using the HydroTracker</p>
+        </div>
+        <div class="col-md-2 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover" style="width:150px;height:150px">
+              <div class="portfolio-hover-content" style="width:150px;height:150px">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="" alt="" style="height:150px; width:150px">
+          </a>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark">
+    <div class="container">
+      <div class="row align-items-center">
+        
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <!-- Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Daily Consumption</h2>
+                <p class="item-intro text-muted">Graph of daily consumption</p>
+                <img class="img-fluid d-block mx-auto" src="" alt="Graph unavailable" style="border:5px solid #000; height:50vh; width:200vh">
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Set a daily goal for the next week</h2>
+                <p class="item-intro text-muted">Recommended 3000mL</p>
+                <form>
+  <h5 for="">Enter Amount</h5>
+  <div class="input-group mb-3">
+    
+    <input type="text" class="form-control" id="amountInput" placeholder="in mL">
+    <button  class="btn btn-outline-secondary" type="button" onclick="submitGoal()">Submit</button>
+  </div>
+</form>
+<div id="changeGoal"></div>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Log External Water Consumption</h2>
+                <p class="item-intro text-muted">Anything you dranfk without using the HydroTracker</p>
+                <form>
+
+  <div class="input-group mb-3">
+    
+    <input type="text" class="form-control" id="externalAmount" placeholder="in mL">
+    <button  class="btn btn-outline-secondary" type="button" onclick="external()">Submit</button>
+  </div>
+</form>
+                  
+<div id="addAmount"></div>
+                  <p><br></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script>  
+      function openNav() {
+      document.getElementById("mySidebar").style.width = "50vh";
+      document.getElementById("mainSidebar").style.marginLeft = "27vh";
+      document.getElementById("wholeBody").style.marginLeft = "50vh";
+      } 
+      
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("mainSidebar").style.marginLeft = "0";
+      document.getElementById("wholeBody").style.marginLeft = "0";
+    }
+    function openNav2() {
+      document.getElementById("mySidebar2").style.width = "50vh";
+      document.getElementById("mainSidebar2").style.marginRight = "50vh";
+        document.getElementById("wholeBody").style.marginRight = "50vh";
+       } 
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav2() {
+      document.getElementById("mySidebar2").style.width = "0";
+      document.getElementById("mainSidebar2").style.marginRight = "0";
+      document.getElementById("wholeBody").style.marginRight = "0";
+
+    }
+  </script>
+  <script src="vendor/jquery/jquery.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/appSite.js"></script>
+   <script src="js/appSite.js"></script>
+    <script src="js/back-end.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase.js"></script>
+    <script src="js/runOnStart.js"></script>
+</body>
+
+</html>
