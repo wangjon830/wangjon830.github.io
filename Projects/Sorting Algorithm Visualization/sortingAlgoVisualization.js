@@ -207,9 +207,9 @@ async function bubbleSort(array){
     disableButtons();
     var length = array.length;
     var swapped = false;
-    for (var i = 0; i < length; i++) { 
+    for (var i = 0; i < length - 1; i++) { 
+        swapped = false;
         for (var j = 0; j < (length - i - 1); j++) {
-            swapped = false;
             var bar1 = document.getElementById("b" + (j+1));
             var bar2 = document.getElementById("b" + (j+2));
             bar1.style.backgroundColor = "#084a8b";
