@@ -156,7 +156,7 @@
         }
 
     });
-    $('#projects').each(function (i) {
+    $('#experience').each(function (i) {
         var bottom_of_object = $(this).offset().top;
         var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -212,7 +212,7 @@
             }
 
         });
-        $('#projects').each(function (i) {
+        $('#experience').each(function (i) {
             var bottom_of_object = $(this).offset().top;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
