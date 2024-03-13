@@ -1,0 +1,13 @@
+{
+    "title": "Jonathan Wang Profile Website",
+    "name": "wangjon-profile",
+    "version": "1.0",
+    "description": "My Profile Website",
+    "homepage": "https://wangjon830.github.io/",
+    "license": "MIT",
+    "author": "Jonathan Wang",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wangjon830/wangjon830.github.io"
+    }
+}
