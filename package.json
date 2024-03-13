@@ -9,5 +9,10 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/wangjon830/wangjon830.github.io"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.2",
+        "jquery": "^3.7.1",
+        "jquery.easing": "^1.4.1"
     }
 }
