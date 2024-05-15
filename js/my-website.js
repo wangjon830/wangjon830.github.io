@@ -240,9 +240,5 @@
         });
     });
 
-    $('.child').click(function () {
-        $(this).addClass("clicked");
-    });
-
 })(jQuery); // End of use strict
 
