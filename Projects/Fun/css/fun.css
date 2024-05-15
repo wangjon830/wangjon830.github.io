@@ -1,0 +1,118 @@
+body {
+    background-color: #F7F7F2;
+}
+
+.mainContainer {
+    padding-top: 50px;
+    min-height: 90vh;
+}
+
+.projectsContainer {
+    padding: 50px 30px 30px 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px 10px 10px;
+    margin: 0;
+}
+
+.projectRow {
+    padding-bottom: 30px;
+}
+
+#title {
+    text-align: center;
+}
+
+#title h1 {
+    font-size: 50px;
+}
+
+#subtitle {
+    text-align: center;
+}
+
+#subtitle p {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+a {
+    color: #000000cc;
+}
+
+.gif-image {
+    display: none; 
+}
+
+a:hover .projectCard {
+    transform: scale(1.05);
+}
+
+.projectCard {
+    transition: transform 0.3s ease; 
+    border: 2px solid #000000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0% 0% 10% 10%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.projectImage {
+    margin: auto;
+    width: 350px;
+    height: 175px;
+    outline: 1px solid #4d81a8c7;
+}
+
+.projectDescription {
+    width: 100%;
+    height: 75px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.projectDescription p {
+    text-decoration: none;
+    color: #000000cc;
+}
+
+.projectDescription .filler-text {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.footer {
+    min-height: 10vh;
+    height: auto;
+    background-color: #00000000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.footer-description {
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer-links {
+    padding-bottom: 15px;
+}
+
+.footer-links a {
+    color: #000000cc;
+    padding: 0px 10px 0px 10px;
+}
+
+.footer-links a:hover {
+    color: #0000006c;
+}
+
+#footer-CC {
+    padding: 10px;
+    color: #000000cc;
+}
